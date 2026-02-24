@@ -1,0 +1,44 @@
+{
+  "report_metadata": {
+    "report_type": "Monthly Distributed Solar Generation Compliance",
+    "reporting_period": "2024-01-01 00:00:00 to 2024-01-31 00:00:00",
+    "system_id": "SUNPOWER-PH-001",
+    "rated_capacity_kw": 8.5,
+    "battery_capacity_kwh": 13.5,
+    "generator": "Geraldine Castillo - Data Analyst",
+    "generated_timestamp": "2026-02-24T18:45:42.187301"
+  },
+  "grid_code_compliance": {
+    "voltage_compliance_pct": 98.05825242718447,
+    "frequency_compliance_pct": 100.0,
+    "power_factor_mean": 0.978656998577743,
+    "thd_voltage_pct": 2.5235088797291296,
+    "thd_current_pct": 6.127283171134405,
+    "status": "NON-COMPLIANT"
+  },
+  "energy_generation_summary": {
+    "total_solar_generation_kwh": 1955.9224467486788,
+    "total_consumption_kwh": 1228.4496121675631,
+    "total_grid_export_kwh": 1439.9553792214272,
+    "total_grid_import_kwh": 712.4825446403113,
+    "self_consumption_rate_pct": 26.379730361239083,
+    "renewable_energy_credits_kwh": 1955.9224467486788
+  },
+  "battery_storage_performance": {
+    "state_of_health_pct": 99.77921128775989,
+    "equivalent_cycles": 5.587879967641779,
+    "round_trip_efficiency_pct": 95.67477275171086,
+    "status": "\ud83d\udfe2 HEALTHY",
+    "projected_eol_years": -11.911684515103957
+  },
+  "inverter_performance": {
+    "mean_efficiency_pct": 97.23252512081109,
+    "thermal_events": 0,
+    "status": "HEALTHY"
+  },
+  "data_quality_metrics": {
+    "total_data_points": 721,
+    "missing_data_points": 0,
+    "data_completeness_pct": 100.0
+  }
+}
