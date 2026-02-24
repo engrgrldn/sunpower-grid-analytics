@@ -156,7 +156,7 @@ class GridComplianceAnalyzer:
     - Power quality assessment (THD, power factor)
     - Grid code violation detection and reporting
     
-    Maps to TSCnet role requirements: "Grid code compliance monitoring"
+
     """
     
     def __init__(self, telemetry_df: pd.DataFrame):
@@ -302,7 +302,7 @@ class BatteryStorageAnalyzer:
     - Cycle counting and lifetime prediction
     - Thermal management monitoring
     
-    Maps to TSCnet role: "Battery storage system monitoring and optimization"
+
     """
     
     def __init__(self, telemetry_df: pd.DataFrame):
@@ -410,7 +410,7 @@ class InverterHealthMonitor:
     - Thermal performance (junction temperature)
     - Anomaly detection (efficiency drops, thermal runaway)
     
-    Maps to TSCnet role: "Equipment health monitoring and maintenance planning"
+
     """
     
     def __init__(self, telemetry_df: pd.DataFrame):
@@ -500,7 +500,7 @@ class ComplianceReportGenerator:
     - Power quality assessment (IEEE 519, 1547)
     - Battery storage safety compliance
     
-    Maps to TSCnet role: "Regulatory reporting and documentation"
+
     """
     
     def __init__(self, telemetry_df, compliance_results, battery_results, inverter_results):
@@ -660,8 +660,8 @@ def main():
     print(f"✓ Battery SoH estimated: {battery_results['soh_pct']:.1f}%")
     print(f"✓ Inverter performance monitored")
     print(f"✓ Regulatory report generated")
-    print("\nRelevance to TSCnet Role:")
-    print("  • Power system data management (equivalent to AVEVA PI System)")
+
+    print("  • Power system data management")
     print("  • Grid code compliance monitoring (IEEE 1547, voltage/frequency)")
     print("  • Battery storage analytics (SoH, degradation modeling)")
     print("  • Predictive maintenance (inverter anomaly detection)")
