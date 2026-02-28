@@ -1,0 +1,53 @@
+name: 'sunpower_grid_analytics'
+version: '1.0.0'
+config-version: 2
+
+profile: 'sunpower'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  sunpower_grid_analytics:
+    # Staging models: Raw → Clean
+    staging:
+      +materialized: view
+      +schema: staging
+      
+    # Marts: Analytics-ready data products
+    marts:
+      +materialized: table
+      +schema: marts
+      
+      grid_compliance:
+        +tags: ["cpuc", "compliance", "regulatory"]
+        
+      battery_analytics:
+        +tags: ["sgip", "battery", "soh"]
+        
+      energy_metrics:
+        +tags: ["nem3", "caiso", "energy"]
+
+vars:
+  # California grid code thresholds (CPUC Rule 21)
+  voltage_nominal_v: 240.0
+  voltage_tolerance_pct: 8.0
+  frequency_nominal_hz: 60.0
+  frequency_tolerance_hz: 0.3
+  power_factor_min: 0.95
+  
+  # SGIP battery thresholds
+  soh_warning_threshold: 85.0
+  soh_critical_threshold: 70.0
+  
+  # Date ranges
+  start_date: '2024-01-01'
